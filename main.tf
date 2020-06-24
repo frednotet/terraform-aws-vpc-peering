@@ -1,12 +1,3 @@
-# Providers are required because of cross-region
-provider "aws" {
-  alias = "this"
-}
-
-provider "aws" {
-  alias = "peer"
-}
-
 locals {
   this_region = data.aws_region.this.name
   peer_region = data.aws_region.peer.name
